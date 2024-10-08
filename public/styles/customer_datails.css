@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../images/3hp.jpg'); /* Corrected path */
+    background-size: cover;
+}
+
+.navbar {
+    font-family: 'Times New Roman', Times, serif;
+    height: 4rem;
+    background: rgb(227, 222, 193);
+    color: #0f1111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.left {
+    font-size: 2.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.right {
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.logout{
+    text-decoration: none;
+    color: #0f1111;
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    width: 100%;
+    overflow-x: auto;
+    /* background-color: #0f1111; */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px; /* Set a minimum width for the table */
+}
+
+th, td {
+    padding: .4rem 1rem;
+    border: 1px solid rgb(227, 222, 193);
+    text-align: left;
+}
+
+th {
+    background-color: rgb(227, 222, 193);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(247, 243, 243);
+}
+
+tr:nth-child(even) {
+    background-color: rgb(235, 229, 229);
+}
+
+button {
+    padding: .5rem 1rem;
+    background-color: red;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .left {
+        font-size: 1.5rem;
+    }
+
+    .right h2 {
+        font-size: 1rem;
+    }
+
+    th, td {
+        padding: .3rem .8rem;
+        font-size: 1rem;
+    }
+
+    table {
+        min-width: 600px; /* Adjust minimum width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .left {
+        font-size: 1.2rem;
+    }
+
+    .right h2 {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: .2rem .5rem;
+        font-size: 0.8rem;
+    }
+
+    table {
+        min-width: 400px; /* Adjust minimum width for very small screens */
+    }
+}
+
+
+.navbar {
+    font-family: 'Times New Roman', Times, serif;
+    height: 4rem;
+    background: rgb(227, 222, 193);
+    color: #0f1111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.left {
+    font-size: 2.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.right {
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+ /* table */
+
+ body{
+    background-image: url(3hp.jpg);
+    background-size: cover;
+ }
+
+ .table{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    width: 100%;
+    overflow-x:auto;
+ }
+ 
+
+
+ th{
+    background-color: rgb(227, 222, 193);
+    /* color: white; */
+    padding: .4rem 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+ }
+
+ td{
+    padding: .4rem 1rem;
+    font-size: 1.3rem;
+ }
+
+ tr:nth-child(odd){
+    background-color: rgb(247, 243, 243);
+ }
+
+ tr:nth-child(even){
+    background-color: rgb(235, 229, 229);
+ }
+
+ button{
+    padding: .5rem 1rem;
+    background-color: red;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-weight: bold;
+ }
+
+ button:hover{
+    background-color: darkred;
+ }
+
+ table, th, td {
+    border: 0px solid rgb(227, 222, 193);
+    border-collapse: collapse;
+ }
+
+
+ @media (max-width: 768px) {
+    .left {
+        font-size: 1.5rem;
+    }
+
+    .right h2 {
+        font-size: 1rem;
+    }
+
+    th, td {
+        padding: .3rem .8rem;
+        font-size: 1rem;
+    }
+
+    table {
+        min-width: 600px; /* Adjust minimum width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .left {
+        font-size: 1.2rem;
+    }
+
+    .right h2 {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: .2rem .5rem;
+        font-size: 0.8rem;
+    }
+
+    table {
+        min-width: 400px; /* Adjust minimum width for very small screens */
+    }
+}

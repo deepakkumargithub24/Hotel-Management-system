@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/booking.css">
+    <title>Booking</title>
+</head>
+<body>
+
+    <% if (alert) { %>
+        <script>
+            alert("<%= alert %>");
+        </script>
+    <% } %>
+
+    <div class="outer-container">
+    <div class="split">
+        <div class="form-container">
+            <div class="form1">
+                <form action="/check" method="post" id="check_form">
+                    <label for="checkin">Check-in Date</label>
+                    <input type="date" name="checkin" placeholder="Enter the check-in date">
+                    <label for="checkout">Check-out Date</label>
+                    <input type="date" name="checkout" placeholder="Enter the check-out date">
+                    <input type="hidden" name="room" value="<%= roomtype %>">
+                    <input type="hidden" name="check_or_book" id="hidden">
+                    <button onclick="check('check')">Check Availability</button>
+                </form>
+            </div>
+        </div>
+    </div>
+      
+    <div class="split">
+         <div class="form-container" id="container" style="display:none;">
+        <!-- <div class="form-container">  -->
+            <div class="form2">
+                <form action="/check" method="post" id="book_form">
+                    <div class="label">
+                        <label for="name">Name :</label>
+                        <input type="text" name="name" placeholder="Enter your name">
+                    </div>
+
+                    <div class="label">
+                        <label for="age">Age :</label>
+                        <input type="number" name="age" placeholder="Enter your age">
+                    </div>
+                    
+                    <div class="label">
+                        <label for="email">Email :</label>
+                        <input type="email" name="email" placeholder="Enter your email">
+                    </div>
+
+                    <div class="label">
+                        <label for="phone">Phone :</label>
+                        <input type="text" name="phone" placeholder="Enter your phone number">
+                    </div>
+                    
+                    <div class="label">
+                        <label for="address">Address :</label>
+                        <input type="text" name="address" placeholder="Enter your Address">
+                    </div>
+
+                    <div class="label">
+                        <label>Gender:</label>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+
+                    <% if (results && results.length > 0) { %>
+                        <div class="label">
+                            <label for="room">Room No. :</label>
+                            <select name="room" class="select">
+                                <% results.forEach(function(room) { %>
+                                    <option value="<%= room.room_number %>"><%= room.room_number %></option>
+                                <% }); %>
+                            </select>
+                        </div>
+                    <% } else { %>
+                        <p>No rooms available</p>
+                    <% } %>
+                    
+                    
+                    <input type="hidden" name="check_or_book" id="hidden">
+
+                    <div class="label mobile">
+                        <p>check-in Date: <%= checkin %></p>
+                        <p>check-out Date: <%= checkout %></p>
+                    </div>
+                    <p>Room Type: <%= roomtype %></p>
+                    <input type="hidden" name="checkin" value="<%= checkin %>">
+                    <input type="hidden" name="checkout" value="<%= checkout %>">
+                    <input type="hidden" name="roomtype" value="<%= roomtype %>">
+                    <hr>
+
+                    <h2>Payment</h2>
+                    <div class="label">
+                        <label for="card_number">Card number :</label>
+                        <input type="text" name="card_number">
+                    </div>
+
+                    <div class="label">
+                        <label for="cvv_number">CVV number :</label>
+                        <input type="number" name="cvv_number">
+                    </div>
+                    
+                    <button onclick="book('book')">Make Payment</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- <div class="form-container" id="container2" style="display: none;">
+            <div class="not">
+                <h1>Not Available</h1>   
+            </div>
+        </div> -->
+        
+    </div>
+    </div>
+    
+ 
+    <script>
+        var count = "<%= count %>"; 
+        var x = document.getElementById('container');
+        if(count && count > 0){
+            alert("room is available");
+            x.style.display = "block";
+        }
+
+        else if(count && count == 0){
+            alert("room is not available");
+        }
+
+    
+        // var y = document.getElementById('container2');
+    
+        // if (num > 0) {
+        //     // alert("Room is available");
+            
+        // } 
+        // else {
+        //     // alert("Room is not available");
+        //     // y.style.display = "block";
+        // }
+
+        function check(value){
+            document.getElementById('hidden').value = value;
+            document.getElementById('check_form').submit();
+        }
+
+        function book(value){
+            document.getElementById('hidden').value = value;
+            document.getElementById('book_form').submit();
+        }
+    </script>
+    
+
+</body>
+</html>

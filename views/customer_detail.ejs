@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/customer_datails.css">
+    <title>Customer Detials</title>
+    <style>
+        body{
+            background-image: url(/images/3hp.jpg);
+            background-size: cover;
+            position: static;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="left">
+            <h1>Customer Details</Details></h1>
+        </div>
+        <div class="right">
+            <a href="/login" class="logout"><h2>Logout</h2></a>
+        </div>
+    </nav>
+
+    <div class="table">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th style="width: .5rem;">Age</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th style="width: 1rem;">Gender</th>
+                <th>Address</th>
+                <th>check-in</th>
+                <th>check-out</th>
+                <th style="width: 1rem;">Room number</th>
+                <th style="width: 1rem;">Room type</th>
+                <th></th>
+            </tr>
+            
+            <% if (results && results.length > 0) { %>
+                <% results.forEach(element => { %>
+                    <tr>
+                        <td><%= element.cname %></td>
+                        <td><%= element.age %></td>
+                        <td><%= element.email %></td>
+                        <td><%= element.phone %></td>
+                        <td><%= element.gender %></td>
+                        <td><%= element.address %></td>
+                        <td><%= element['check_in'] %></td>
+                        <td><%= element['check_out'] %></td>
+                        <td><%= element.room_no %></td>
+                        <td><%= element.room_type %></td>
+                        <td><button onclick="delete_row('<%= element.room_no %>')">Delete</button></td>
+                    </tr>
+                <% }); %>
+            <% } %>            
+        </table>
+
+        <form action="/customer-detail" method="post" id="delete1" style="display: none;">
+            <input type="hidden" name="message2" id="delete2">
+        </form>
+
+    </div>
+    <script>
+        function delete_row(value){
+            document.getElementById('delete2').value = value;
+            document.getElementById('delete1').submit();
+            // location.reload();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/add_room_employee.css">
+    <title>Add Employees</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="left">
+            <h1>Add Employees</h1>
+        </div>
+        <div class="right">
+            <a href="/login"><h2>Logout</h2></a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form action="/add-employee" method="post">
+
+            <div class="label">
+                <label for="ename">Name:</label>
+                <input type="text" name="ename" placeholder="Enter the Employee Name">
+            </div>
+
+            <div class="label">
+                <label for="age">Age:</label>
+                <input type="number" name="age" placeholder="Enter the Employee Age">
+            </div>
+
+            <div class="label">
+                <label for="email">Email:</label>
+                <input type="text" name="email" placeholder="Enter the Employee Email">
+            </div>
+
+            <div class="label">
+                <label for="phone">Phone:</label>
+                <input type="text" name="phone" placeholder="Enter the Employee Phone number">
+            </div>
+
+            <div class="label">
+                <label for="address">Address:</label>
+                <input type="text" name="address" placeholder="Enter the Employee Address">
+            </div>
+            
+            <div class="label">
+                <label for="work_type">Work Type:</label>
+                <select name="work_type" id="work_type">
+                    <option value="Hotel Manager">Hotel Manager</option>
+                    <option value="Chef">Chef</option>
+                    <option value="Housekeeper">Housekeeper</option>    
+                    <option value="Concierge">Concierge</option>
+                    <option value="Food Service">Food Service</option>
+                    <option value="Kitchen Manager">Kitchen Manager</option>
+                    <option value="Maintenance Technician">Maintenance Technician</option>
+                </select>
+            </div>
+
+            <div class="label">
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" value="Male">
+                <label for="gender">Male</label>
+                <input type="radio" name="gender" value="Female">
+                <label for="gender">Female</label>
+            </div>
+
+
+            <button type="submit">Add Employee</button>
+        </form>
+    </div>
+    <script>
+        const message = "<%= message %>";
+        if (message) {
+            alert(message);
+        }
+    </script>
+    
+</body>
+</html>

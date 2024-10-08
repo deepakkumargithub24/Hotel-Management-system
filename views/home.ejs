@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/home.css">
+    <title>Home</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="left">
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/facility">Facility</a></li>
+                <li><a href="/foods">Foods</a></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <a href="/" class="logout">Logout</a>
+        </div>
+    </nav>
+
+    <div class="first">
+        <h1 class="hotel-name">Welcome to <span class="name">Royal Hotel</span></h1>
+        <p class="hotel-des">A sanctuary of elegance and comfort nestled in the heart of the bustling city. Our hotel blends modern luxury with timeless charm, offering a serene escape for both leisure and business travelers.</p>
+    </div>
+
+    <div class="second">
+        <div class="type1">
+            <div class="image1"></div>
+            <div class="contains">
+                <div class="price"><h2>$120</h2></div>
+                <div class="btn">
+                    <h2>Single Bed</h2>
+                    <button onclick="sendMessage('Single')">Book now</button>
+                </div>
+            </div>
+        </div>
+        <div class="type2">
+            <div class="image2"></div>
+            <div class="contains">
+                <div class="price"><h2>$160</h2></div>
+                <div class="btn">
+                    <h2>Double Bed</h2>
+                    <button onclick="sendMessage('Double')">Book now</button>
+                </div>
+            </div>
+        </div>
+        <div class="type3">
+            <div class="image3"></div>
+            <div class="contains">
+                <div class="price"><h2>$200</h2></div>
+                <div class="btn">
+                    <h2>Family Room</h2>
+                    <button onclick="sendMessage('Family')">Book now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="third">
+        <h1 class="about">About Us</h1>
+        <h1 class="heading">Welcome to Royal Hotel</h1>
+        <p class="para">At Royal hotel, we strive to provide an exceptional experience for every guest. Our hotel combines luxurious accommodations, impeccable service, and a prime location to create an unforgettable stay. Whether you’re visiting for business, leisure, or a special occasion, Royal hotel offers everything you need for a comfortable and memorable visit.</p>
+        <h1 class="heading">Our Story</h1>
+        <p class="para">Established in 1960, Royal has been a landmark in Mumbai for 84 years. Our hotel was founded on the principles of hospitality, elegance, and innovation. Over the years, we have grown and evolved, consistently updating our facilities and services to meet the needs of modern travelers while preserving the charm and character that make us unique.</p>
+        <h1 class="heading">Our Rooms and Suites</h1>
+        <p class="para">Our beautifully appointed rooms and suites offer the perfect blend of comfort and style. Each room is designed with your relaxation in mind, featuring plush bedding, modern amenities, and stunning views. Whether you choose a cozy standard room or an expansive suite, you’ll find everything you need for a restful stay.</p>
+        <h1 class="heading">Join Us</h1>
+        <p class="para">Discover the elegance and charm of Royal Hotel. We look forward to welcoming you and providing an exceptional stay that exceeds your expectations. Book your stay with us today and experience the best that Mumbai has to offer.</p>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <h1 class="contact">Contact Us</h1>
+            <div class="content">
+                <div>
+                    <ul class="list">
+                        <h2 class="contact-heading">Social Media</h2>
+                        <li>Facebook (facebook.com/RoyalHotel)</li>
+                        <li>Twitter (twitter.com/RoyalHotel)</li>
+                        <li>Instagram (instagram.com/RoyalHotel)</li>
+                        <li>Phone: +1 (555) 456-7890</li>
+                        <li>Email: service@royalhotel.com</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul class="list">
+                        <h2 class="contact-heading">Location</h2>
+                        <li>Visit us at:</li>
+                        <li>Royal Hotel</li>
+                        <li>123 Luxury Lane</li>
+                        <li>Mumbai, Maharastra, 204001</li>
+                    </ul>
+                </div> 
+            </div>
+            
+        </div>
+    </footer>
+
+
+
+
+    <form id="messageForm" action="/booking" method="POST" style="display: none;">
+        <input type="hidden" name="message" id="messageInput">
+    </form>
+
+    <script>
+        function sendMessage(value) {
+            document.getElementById('messageInput').value = value;
+            document.getElementById('messageForm').submit();
+        }
+    </script>
+</body>
+</html>

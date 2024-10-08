@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(/images/3hp.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar {
+    font-family: 'Times New Roman', Times, serif;
+    height: 4rem;
+    background: rgb(227, 222, 193);
+    color: #0f1111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.left {
+    font-size: 2.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.right {
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: #0f1111;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(227, 222, 193);
+    padding: 2.5rem;
+    border-radius: 10px;
+    width: 40vw;
+    gap: 1rem;
+}
+
+.label{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    align-items: center;
+}
+
+input{
+    padding: .5rem 1rem;
+    width: 70%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+select{
+    width: 76%;
+    padding: .5rem 1rem;
+    background-color: white;
+    font-size: 1.2rem;
+}
+
+button{
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+button:hover{
+    background-color: darkgreen;
+}
+
+@media only screen and (max-width: 900px){
+    form{
+        padding: 1.5rem;
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    form{
+        padding: 1rem;
+        width: 80%;
+    }
+
+    .label{
+        font-size: 1rem;
+    }
+
+    button{
+        font-size: 1rem;
+    }
+
+    .left{
+        font-size: 1rem;
+    }
+}

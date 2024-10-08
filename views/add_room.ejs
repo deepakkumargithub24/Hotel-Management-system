@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/add_room_employee.css">
+    <title>Add Rooms</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="left">
+            <h1>Add Room</h1>
+        </div>
+        <div class="right">
+            <a href="/login"><h2>Logout</h2></a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form action="/add-room" method="post">
+
+            <div class="label">
+                <label for="id">Room Id:</label>
+                <input type="number" name="id" placeholder="Enter the Room ID">
+            </div>
+
+            <div class="label">
+                <label for="room_number">Room number:</label>
+                <input type="text" name="room_number" placeholder="Enter the new room number">
+            </div>
+
+            
+            <div class="label">
+                <label for="room_type">Room Type:</label>
+                <select name="room_type" id="work_type">
+                    <option value="Single">Single Room</option>
+                    <option value="Double">Double Room</option>
+                    <option value="Family">Family Room</option>    
+                </select>
+            </div>
+
+            <button type="submit">Add Room</button>
+        </form>
+    </div>
+
+    <script>
+        const message = "<%= message %>";
+        if (message) {
+            alert(message);
+        }
+    </script>
+    
+</body>
+</html>

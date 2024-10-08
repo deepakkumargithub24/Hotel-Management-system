@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: rgb(51, 51, 51);
+    background: gainsboro;
+}
+
+.header h1 {
+    margin: 1rem 0;
+    text-align: center;
+    align-items: center;
+    color: rgb(139, 102, 8);
+    font-size: 2.5rem;
+    
+}
+
+.nav-bar{
+    background: rgb(139, 102, 8) !important;
+}
+
+
+
+.menu {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.menu-section {
+    margin-bottom: 2rem;
+}
+
+.menu-section h2 {
+    font-size: 2rem;
+    color: rgb(139, 102, 8);
+    margin-bottom: 1rem;
+}
+
+.food-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 10px;
+    background: rgb(245, 234, 214);
+    /* color: rgb(139, 102, 8); */
+}
+
+.food-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-right: 1rem;
+    border: 1px solid rgb(139, 102, 8);
+}
+
+.food-item h3 {
+    font-size: 1.5rem;
+    color: rgb(139, 102, 8)
+}
+
+.food-item p {
+    color: rgb(139, 102, 8);
+}
+
+.footer {
+    background: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}

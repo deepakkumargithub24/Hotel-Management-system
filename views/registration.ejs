@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="/styles/registration.css">
+</head>
+<body>
+    <!-- <h1>This is Registration Page</h1> -->
+    <% if (locals.data) { %>
+        <script>
+            alert('<%= data %>');
+        </script>
+    <% } %>
+    
+    <div class="logo">
+        <img src="/images/hotel_logo8.png" alt="logo">
+    </div>
+    <div class="outer-box">
+        <h1>Registration</h1>
+        <form action="/registration" method="post" class="form">
+            <label for="name" class="label">Name</label>
+            <input type="text" name="name" class="pad" placeholder="Enter your name">
+            <label for="rUsername" class="label">username</label>
+            <input type="text" name="rUsername" class="pad" placeholder="Enter your username">
+            <label for="email" class="label">email</label>
+            <input type="email" name="email" class="pad" placeholder="Enter your email">
+            <label for="rPassword" class="label">password</label>
+            <input type="password" name="rPassword" class="pad" placeholder="Enter your password">
+            <button type="submit" class="pad">submit</button>
+        </form>
+    </div>
+</body>
+</html>

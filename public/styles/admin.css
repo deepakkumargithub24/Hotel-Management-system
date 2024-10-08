@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    font-family: 'Times New Roman', Times, serif;
+    height: 4rem;
+    background: rgb(227, 222, 193);
+    color: #0f1111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.left {
+    font-size: 2.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.right {
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+}
+
+.card{
+    height: 37vh;
+    width: 17vw;
+    background-color: rgb(227, 222, 193);
+    border-radius: 12px;
+    transition: width .1s, height .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (max-width: 900px) {
+    .card{
+        height: 10rem;
+        width: 20rem;   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 90vh;
+    }
+
+    .card:hover{
+        width: 21rem;
+        height: 10rem !important;
+    }
+
+    img{
+        height: 8rem !important;
+        width: 13rem !important;
+    }
+}
+
+.card:hover{
+    height: 39vh;
+    background-color: rgb(228, 220, 176);
+}
+
+body{
+    background-image: url(/images/3hp.jpg);
+    background-size: cover;
+}
+
+img{
+    height: 22vh;
+    width: 12vw;
+}
+
+a{
+    text-decoration: none;
+    color: #0f1111;
+}

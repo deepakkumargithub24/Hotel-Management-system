@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(44, 3, 82);
+    align-items: center;
+    gap: 3vw;
+    height: 10vh;
+    justify-content: space-between;
+    padding: 0 2vw;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 3vw;
+    font-size: 1.5rem;
+    padding-left: 1vw;
+}
+
+a {
+    text-decoration: none;
+    color: wheat;
+}
+
+.logout {
+    font-size: 1.5rem;
+    padding-right: 1vw;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    background-image: url('/images/hotel7.jpg');
+    background-size: cover;
+    height: 90vh;
+}
+
+.hotel-name {
+    font-size: 3.5rem;
+    color: wheat;
+    text-shadow: 6px 6px 8px black;
+}
+
+.hotel-des {
+    font-size: 1.5rem;
+    color: white;
+    max-width: 50%;
+    font-weight: bold;
+    text-shadow: 4px 4px 7px black;
+}
+
+.name {
+    color: rgb(50, 4, 94);
+    text-shadow: 4px 4px 7px white;
+}
+
+/* Second section */
+.second {
+    height: auto;
+    background-color: rgb(221, 218, 218);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2vw;
+}
+
+.image1{
+    background-size: cover;
+    background-image: url(/images/single_bed.jpg);
+    width: 20vw;
+    height: 30vh;
+    /* margin-top: -6vh; */
+    box-shadow: 10px 0px 10px black;
+}
+
+.image2{
+    background-size: cover;
+    background-image: url(/images/double_bed.jpg);
+    width: 20vw;
+    height: 30vh;
+    /* margin-top: -6vh; */
+    box-shadow: 10px 0px 10px black;
+}
+
+.image3{
+    background-size: cover;
+    background-image: url(/images/familyRoom.jpg);
+    width: 20vw;
+    height: 30vh;
+    /* margin-top: -6vh; */
+    box-shadow: 10px 0px 10px black;
+}
+
+.contains {
+    width: 20vw;
+    height: 20vh;
+    align-items: center;
+}
+
+.type1, .type2, .type3 {
+    box-shadow: 10px 15px 10px black;
+    background-color: antiquewhite;
+    margin: 1vw;
+    margin-top: -10vh;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+.price {
+    margin: 0vh 1vw;
+    padding: 10px;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-around;
+    width: 20vw;
+}
+
+button {
+    background-color: rgb(14, 98, 225);
+    padding: 0vh 1vw;
+    font-size: 1rem;
+    color: aliceblue;
+}
+
+/* Third section */
+.third {
+    background-color: rgb(221, 218, 218);
+    padding: 10vh;
+}
+
+.about {
+    text-align: center;
+    font-size: 6.5rem;
+    padding-top: 10vh;
+    color: rgb(245, 199, 112);
+    text-shadow: 7px 7px 10px #07180c;
+}
+
+.heading {
+    font-size: 2.5rem;
+    margin: 2vh 10vw;
+    color: white;
+    text-shadow: 3px 3px 5px #07180c;
+}
+
+.para {
+    font-size: 1.5rem;
+    width: 80%;
+    margin: auto;
+    color: rgb(94, 71, 15);
+}
+
+/* Footer section */
+.footer {
+    height: 60vh;
+    background-color: gray;
+    padding: 2vw;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact {
+    font-size: 6.5rem;
+    text-align: center;
+    color: black;
+    text-shadow: 4px 4px 7px white;
+}
+
+.list {
+    color: black;
+    font-size: 1.4rem;
+    list-style: disc;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 2vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+.contact-heading {
+    text-align: left;
+    font-size: 2.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .hotel-des {
+        max-width: 70%;
+    }
+
+    .second {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image1, .image2, .image3 {
+        width: 40vw;
+        height: 25vh;
+        margin-top: 2vh;
+    }
+
+    .contains {
+        width: 40vw;
+    }
+
+    .btn {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        gap: 1vh;
+        height: auto;
+        padding: 1vh 2vw;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 1vh;
+        padding: 1vh;
+        align-items: center;
+    }
+
+    .hotel-name {
+        font-size: 2.5rem;
+    }
+
+    .hotel-des {
+        font-size: 1.2rem;
+        max-width: 90%;
+    }
+
+    .about {
+        font-size: 4rem;
+    }
+
+    .heading {
+        font-size: 2rem;
+        margin: 2vh 5vw;
+    }
+
+    .para {
+        font-size: 1.2rem;
+    }
+
+    .contact {
+        font-size: 4rem;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .second {
+        padding: 2vw;
+    }
+
+    .image1, .image2, .image3 {
+        width: 80vw;
+        height: 20vh;
+        margin-top: 2vh;
+    }
+
+    .contains {
+        width: 80vw;
+    }
+
+    .btn {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        flex-direction: column;
+        gap: 1vh;
+        height: auto;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 1vh;
+        padding: 1vh;
+        align-items: center;
+    }
+
+    .logout {
+        padding-right: 0;
+    }
+
+    .hotel-name {
+        font-size: 2rem;
+    }
+
+    .hotel-des {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .about {
+        font-size: 3rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+        margin: 1vh 2vw;
+    }
+
+    .para {
+        font-size: 1rem;
+    }
+
+    .contact {
+        font-size: 3rem;
+    }
+
+    .list {
+        font-size: 1rem;
+    }
+
+    .second {
+        padding: 2vw;
+    }
+
+    .image1, .image2, .image3 {
+        width: 90vw;
+        height: 20vh;
+        margin-top: 2vh;
+    }
+
+    .contains {
+        width: 90vw;
+    }
+
+    .btn {
+        width: 90vw;
+    }
+}
