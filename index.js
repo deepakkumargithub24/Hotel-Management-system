@@ -1,20 +1,33 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import mysql from 'mysql2';
+import dotenv from 'dotenv';
 
+dotenv.config();
 const app = express();
 const port = 3000;
 
 // Create a connection pool to the database  
+// const pool = mysql.createPool({
+//   host: 'localhost',
+//   user: 'root',
+//   password: '',
+//   database: 'hotel_management_system',
+//   waitForConnections: true,
+//   connectionLimit: 10,
+//   queueLimit: 0
+// });
+
 const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'hotel_management_system',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
 });
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
